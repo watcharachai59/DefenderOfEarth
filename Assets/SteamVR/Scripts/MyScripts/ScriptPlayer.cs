@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using Valve.VR;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+
 
 public class ScriptPlayer : MonoBehaviour
 {
@@ -383,8 +386,15 @@ public class ScriptPlayer : MonoBehaviour
 
 
 
+                        if (raycastHit.transform.name == "Militarytarget")
+                        {
+                            raycastHit.rigidbody.AddForce(-raycastHit.normal * 50f);
+                        }
 
-                        if (raycastHit.transform.tag == "headAi")
+
+
+
+                            if (raycastHit.transform.tag == "headAi")
                         {
                             if (raycastHit.transform.name == "head")
                             {
@@ -567,18 +577,10 @@ public class ScriptPlayer : MonoBehaviour
                             if (raycastHit.transform.tag == "StartGame")
                             {
 
-                                SceneManager.LoadScene(1);
-
-
+                                Sound.PlayOneShot(soundReHp, 30f);
+                                StartCoroutine(stargame());
 
                             }
-
-
-
-
-
-
-
 
                         }
 
@@ -603,6 +605,12 @@ public class ScriptPlayer : MonoBehaviour
             laserLineRendererR.SetPosition(0, targetPosition);
             laserLineRendererR.SetPosition(1, endPosition);
         }
+    }
+    IEnumerator stargame()
+    {
+        
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(1);
     }
 
     void ShootLaserFromTargetPositionL(Vector3 targetPosition, Vector3 direction, float length)
@@ -677,6 +685,12 @@ public class ScriptPlayer : MonoBehaviour
 
 
 
+
+
+                        if (raycastHit.transform.name == "Militarytarget")
+                        {
+                            raycastHit.rigidbody.AddForce(-raycastHit.normal * 50f);
+                        }
 
 
 
@@ -863,9 +877,8 @@ public class ScriptPlayer : MonoBehaviour
                         if (raycastHit.transform.tag == "StartGame")
                         {
 
-                            SceneManager.LoadScene(1);
-
-
+                            Sound.PlayOneShot(soundReHp, 30f);
+                            StartCoroutine(stargame());
 
                         }
 

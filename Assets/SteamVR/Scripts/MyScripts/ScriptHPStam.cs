@@ -80,9 +80,11 @@ public class ScriptHPStam : MonoBehaviour
 
             texttime.text = minutes + ":" + seconds;
 
+
+
             if (minutes == "1")
             {
-                texttclass.text = "A";
+                texttclass.text = "S";
             }
             else if (minutes == "2")
             {

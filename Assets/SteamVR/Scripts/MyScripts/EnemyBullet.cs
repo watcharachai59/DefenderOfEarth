@@ -6,7 +6,7 @@ public class EnemyBullet : MonoBehaviour
 {
     public AudioClip soundbomb;
     AudioSource sound;
-
+    public float speedBullet = 20f;
     float HP = 1;
 
 
@@ -49,7 +49,7 @@ public class EnemyBullet : MonoBehaviour
 
         Rigidbody rb = GetComponent<Rigidbody>();
 
-        Vector3 dir = (target - transform.position).normalized * 20f;
+        Vector3 dir = (target - transform.position).normalized * speedBullet;
         rb.velocity = new Vector3(dir.x, dir.y, dir.z);
 
 

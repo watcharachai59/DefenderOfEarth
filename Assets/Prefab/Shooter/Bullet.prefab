@@ -359,6 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundbomb: {fileID: 8300000, guid: d53053a416c413d40ae35d3b3d2c8277, type: 3}
+  speedBullet: 15
   efaf: {fileID: 100006, guid: 7e9c50938e32351438a7df9ccad2f2a5, type: 3}
 --- !u!1001 &388145076
 PrefabInstance:
