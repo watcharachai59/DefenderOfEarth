@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.remakevrcombatshooting.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\PC CGM\\Desktop\\Remake VR Combat Shooting\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "Remake VR Combat Shooting [Testing]"
+        }
+      }
+    }
+  ]
+}
